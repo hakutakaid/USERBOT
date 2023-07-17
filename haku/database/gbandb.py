@@ -1,3 +1,9 @@
+"""
+ᴍʏ ɢɪᴛʜᴜʙ : https://github.com/hakutakaid
+ᴛʜᴀɴᴋs ᴛᴏ ᴢᴀɪᴅ-ᴜsᴇʀʙᴏᴛ
+
+"""
+
 from typing import Dict, List, Union
 
 from haku.database import dbb as db

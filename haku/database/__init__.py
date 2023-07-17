@@ -1,3 +1,9 @@
+"""
+ᴍʏ ɢɪᴛʜᴜʙ : https://github.com/hakutakaid
+ᴛʜᴀɴᴋs ᴛᴏ ᴢᴀɪᴅ-ᴜsᴇʀʙᴏᴛ
+
+"""
+
 import motor.motor_asyncio
 
 from config import MONGO_URL

@@ -1,3 +1,8 @@
+"""
+ᴍʏ ɢɪᴛʜᴜʙ : https://github.com/hakutakaid
+ᴛʜᴀɴᴋs ᴛᴏ ᴢᴀɪᴅ-ᴜsᴇʀʙᴏᴛ
+
+"""
 from pyrogram import filters, Client
 import asyncio
 from pyrogram.types import Message 
@@ -5,9 +10,9 @@ from pyrogram.types import Message
 from pyrogram.methods import messages
 from haku.database.pmpermitdb import get_approved_users, pm_guard
 import haku.database.pmpermitdb as Haku
-#from config import LOG_GROUP, PM_LOGGER
-LOG_GROUP=0
-PM_LOGGET=0
+
+from config import CMD as cmd
+
 FLOOD_CTRL = 0
 ALLOWED = []
 USERS_AND_WARNS = {}
@@ -30,7 +35,7 @@ def get_arg(message):
     return " ".join(split[1:])
 
 
-@Client.on_message(filters.command("setlimit", ["."]) & filters.me)
+@Client.on_message(filters.command("setlimit", cmd) & filters.me)
 async def pmguard(client, message):
     arg = get_arg(message)
     if not arg:
@@ -41,7 +46,7 @@ async def pmguard(client, message):
 
 
 
-@Client.on_message(filters.command("setblockmsg", ["."]) & filters.me)
+@Client.on_message(filters.command("setblockmsg", cmd) & filters.me)
 async def setpmmsg(client, message):
     arg = get_arg(message)
     if not arg:
@@ -55,7 +60,7 @@ async def setpmmsg(client, message):
     await message.edit("**Custom block message set**")
 
 
-@Client.on_message(filters.command(["allow", "ap", "approve", "a"], ["."]) & filters.me & filters.private)
+@Client.on_message(filters.command(["ok", "ap", "approve", "a"], cmd) & filters.me & filters.private)
 async def allow(client, message):
     chat_id = message.chat.id
     pmpermit, pm_message, limit, block_message = await Haku.get_pm_settings()
@@ -68,7 +73,7 @@ async def allow(client, message):
     USERS_AND_WARNS.update({chat_id: 0})
 
 
-@Client.on_message(filters.command(["deny", "dap", "disapprove", "dapp"], ["."]) & filters.me & filters.private)
+@Client.on_message(filters.command(["deny", "dap", "disapprove", "dapp"], cmd) & filters.me & filters.private)
 async def deny(client, message):
     chat_id = message.chat.id
     await Haku.deny_user(chat_id)
@@ -88,8 +93,6 @@ async def reply_pm(app: Client, message):
     pmpermit, pm_message, limit, block_message = await Haku.get_pm_settings()
     user = message.from_user.id
     user_warns = 0 if user not in USERS_AND_WARNS else USERS_AND_WARNS[user]
-    if PM_LOGGER:
-        await app.send_message(PM_LOGGER, f"{message.text}")
     if user_warns <= limit - 2:
         user_warns += 1
         USERS_AND_WARNS.update({user: user_warns})

@@ -1,3 +1,9 @@
+"""
+ᴍʏ ɢɪᴛʜᴜʙ : https://github.com/hakutakaid
+ᴛʜᴀɴᴋs ᴛᴏ ᴢᴀɪᴅ-ᴜsᴇʀʙᴏᴛ
+
+"""
+
 from haku.database import cli
 
 gmuteh = cli["GMUTE"]

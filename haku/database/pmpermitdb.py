@@ -1,3 +1,9 @@
+"""
+ᴍʏ ɢɪᴛʜᴜʙ : https://github.com/hakutakaid
+ᴛʜᴀɴᴋs ᴛᴏ ᴢᴀɪᴅ-ᴜsᴇʀʙᴏᴛ
+
+"""
+
 from haku.database import cli
 import asyncio
 
@@ -10,7 +16,7 @@ PMPERMIT_MESSAGE = (
     "**ᴜɴᴛɪʟ ᴛʜᴇɴ, ᴅᴏɴ'ᴛ ꜱᴘᴀᴍ, ᴏʀ ʏᴏᴜ'ʟʟ ɢᴇᴛ ʙʟᴏᴄᴋᴇᴅ ᴀɴᴅ ʀᴇᴘᴏʀᴛᴇᴅ ʙʏ ᴍᴇ, ꜱᴏ ʙᴇ ᴄᴀʀᴇꜰᴜʟʟ ᴛᴏ ꜱᴇɴᴅ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇꜱ!**"
 )
 
-BLOCKED = "**ʙᴇᴇᴘ ʙᴏᴏᴘ ꜰᴏᴜɴᴅᴇᴅ ᴀ ꜱᴘᴀᴍᴍᴇʀ!, ʙʟᴏᴄᴋᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ!**"
+BLOCKED = "**Sorry !  I will block you, for spamming messages to me**"
 
 LIMIT = 5
 
