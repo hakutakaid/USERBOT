@@ -1,8 +1,9 @@
 """
-ɪɴɪ ᴀᴅᴀʟᴀʜ ᴋᴏᴅᴇ ʙᴜᴀᴛᴀɴ @Hakutaka_id
-ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴛᴇʟᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ sᴀʏᴀ
-
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
 """
+
+
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from telegraph import Telegraph, exceptions, upload_file

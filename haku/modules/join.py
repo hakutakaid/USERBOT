@@ -1,3 +1,8 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
+"""
+
 from pyrogram import *
 from pyrogram.enums import *
 from pyrogram.types import *

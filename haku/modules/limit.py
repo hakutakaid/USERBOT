@@ -1,10 +1,15 @@
-from pyrogram import Client as bots
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
+"""
+
+from pyrogram import Client
 from asyncio import sleep
 from pyrogram.raw.functions.messages import DeleteHistory, StartBot
 from config import CMD as cmd
 from haku.code.base import *
 
-@bots.on_message(filters.command("limit", cmd) & filters.me)
+@Client.on_message(filters.command("limit", cmd) & filters.me)
 async def _(client, message):
     await client.unblock_user("SpamBot")
     bot_info = await client.resolve_peer("SpamBot")

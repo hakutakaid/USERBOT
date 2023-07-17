@@ -1,6 +1,6 @@
 """
-https://t.me/Hakutaka_id
-
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
 """
 
 from pyrogram import *

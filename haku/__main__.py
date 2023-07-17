@@ -1,3 +1,8 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : 
+"""
+
 import asyncio
 import logging
 from logging.handlers import RotatingFileHandler
@@ -71,7 +76,60 @@ async def main():
             plugins=dict(root="haku/modules")
         )
         bots.append(bot5)
+        
+    if SESSION:
+        bot6 = Client(
+            "bot6",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            session_string=SESSION5,
+            plugins=dict(root="haku/modules")
+        )
+        bots.append(bot6)
+        
+    if SESSION:
+        bot7 = Client(
+            "bot7",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            session_string=SESSION6,
+            plugins=dict(root="haku/modules")
+        )
+        bots.append(bot7)
 
+    if SESSION:
+        bot8 = Client(
+            "bot8",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            session_string=SESSION7,
+            plugins=dict(root="haku/modules")
+        )
+        bots.append(bot8)
+         
+    if SESSION:
+        bot9 = Client(
+            "bot9",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            session_string=SESSION8,
+            plugins=dict(root="haku/modules")
+        )
+        bots.append(bot9)
+        
+    if SESSION:
+        bot10 = Client(
+            "bot1",
+            api_id=API_ID,
+            api_hash=API_HASH,
+            session_string=SESSION9,
+            plugins=dict(root="haku/modules")
+        )
+        bots.append(bot10)
+           
+          
+             
+                   
     # Configure logging
     logging.basicConfig(
         level=logging.INFO,
