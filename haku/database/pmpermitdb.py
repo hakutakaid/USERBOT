@@ -5,16 +5,18 @@
 """
 
 from haku.database import cli
-from pyrogram import Client
 import asyncio
 
 collection = cli["Haku"]["pmpermit"]
 
-user_id = client.me.id
-
 PMPERMIT_MESSAGE = (
-    "``ᴘᴇʀɪɴɢᴀᴛᴀɴ !!! ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ \n\nsᴇʙᴇʟᴜᴍ ᴅɪ ᴀᴄᴄ sᴀᴍᴀ [ᴛᴜᴀɴ](tg://user?id={user_id}) sᴀʏᴀ\nᴀᴛᴀᴜ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴅɪ ʙʟᴏᴄᴋ!!\n``"
+    f"📣 **PESAN PENTING** 📣\n\n"
+    f"⚠️ ᴘᴇʀɪɴɢᴀᴛᴀɴ !!! ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ! ⚠️\n"
+    f"🚫 sᴇʙᴇʟᴜᴍ ᴅɪ ᴀᴄᴄ sᴀᴍᴀ ᴛᴜᴀɴ sᴀʏᴀ\n"
+    f"    ᴀᴛᴀᴜ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴅɪ ʙʟᴏᴄᴋ!! 🚫\n"
+    f"🤖 ᴘᴇsᴀɴ ᴏᴛᴏᴍᴀᴛɪs ʙʏ χнαχнυ υѕєявσт 🤖"
 )
+
 
 BLOCKED = "``ᴍᴀᴀғ ᴀɴᴅᴀ sᴀʏᴀ ʙʟᴏᴄᴋɪʀ !\n ᴋᴀʀᴇɴᴀ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ !``"
 
