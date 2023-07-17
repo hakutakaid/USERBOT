@@ -11,4 +11,4 @@ cli = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URL)
 
 dbb = cli.program
 notesdb = cli.notes
-
+logdb = cli.gruplog

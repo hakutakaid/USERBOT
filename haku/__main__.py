@@ -16,12 +16,7 @@ SESSION6 = config.SESSION6
 SESSION7 = config.SESSION7
 SESSION8 = config.SESSION8
 SESSION9 = config.SESSION9
-LOG_CHAT = config.LOG_CHAT
 
-if LOG_CHAT:
-    LOG_GROUP = LOG_CHAT
-else:
-    LOG_GROUP = 777000
 
 async def idle():
     while True:

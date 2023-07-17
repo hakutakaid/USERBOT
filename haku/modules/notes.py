@@ -1,79 +1,35 @@
 from asyncio import sleep
-
-from pyrogram import filters
-from pyrogram import Client, Message
-from pyrogram import *
-from haku.database import *
-from . import *
+from pyrogram import Client, filters
+from haku.database.notes import *
+from pyrogram.types import Message
+from .pmguard import get_arg, denied_users
 
 
-def get_arg(message: Message):
-    msg = message.text
-    msg = msg.replace(" ", "", 1) if msg[1] == " " else msg
-    split = msg[1:].replace("\n", " \n").split(" ")
-    if " ".join(split[1:]).strip() == "":
-        return ""
-    return " ".join(split[1:])
-
-
-@Client.on_message(filters.me & filters.command("save", cmd))
+@Client.on_message(filters.me & filters.command("save", "."))
 async def simpan_note(client, message):
     name = get_arg(message)
     user_id = message.from_user.id
-    message.chat.id
     msg = message.reply_to_message
     if not msg:
         return await message.reply("`Silakan balas ke pesan.`")
-    botlog_chat_id = await get_botlog(user_id)
-    if not botlog_chat_id:
-        return await message.reply(
-            "`Maaf, tidak dapat menemukan ID chat log bot.`\nPastikan Anda Telah Mengtur Log Group Anda"
-        )
-    anu = await msg.copy(botlog_chat_id)
+    anu = await msg.forward(client.me.id)
     msg_id = anu.id
-    await client.send_message(
-        botlog_chat_id,
+    await client.send_message(client.me.id,
         f"#NOTE\nKEYWORD: {name}"
         "\n\nPesan berikut disimpan sebagai data balasan catatan untuk obrolan, mohon jangan dihapus !!",
-        reply_to_message_id=anu.id,
     )
     await sleep(1)
     await save_note(user_id, name, msg_id)
     await message.reply(f"**Berhasil menyimpan catatan dengan nama** `{name}`")
 
 
-@Client.on_message(filters.me & filters.command("get", cmd))
+@Client.on_message(filters.me & filters.command("get", "."))
 async def panggil_notes(client, message):
     name = get_arg(message)
     user_id = message.from_user.id
-    botlog_chat_id = await get_botlog(user_id)
     _note = await get_note(user_id, name)
     if not _note:
         return await message.reply("`Tidak ada catatan seperti itu.`")
-    msg = message.reply_to_message or message
-    msg_o = await client.get_messages(botlog_chat_id, _note)
-    await msg_o.copy(message.chat.id, reply_to_message_id=msg.id)
+    msg_o = await client.get_messages(client.me.id, _note)
+    await msg_o.copy(message.chat.id, reply_to_message_id=message.id)
 
-
-@Client.on_message(filters.me & filters.command("rm", cmd))
-async def remove_notes(client, message):
-    name = get_arg(message)
-    user_id = message.from_user.id
-    deleted = await delete_note(user_id, name)
-    if deleted:
-        await message.reply(f"**Berhasil Menghapus Catatan:** `{name}`")
-    else:
-        await message.reply(f"**Tidak dapat menemukan catatan:** `{name}`")
-
-
-@Client.on_message(filters.me & filters.command("notes", cmd))
-async def get_notes(client, message):
-    user_id = message.from_user.id
-    await get_botlog(user_id)
-    _notes = await get_note_names(user_id)
-    if not _notes:
-        return await message.reply("**Tidak ada catatan.**")
-    msg = f"** Daftar catatan**\n\n"
-    for note in _notes:
-        msg += f"**•** `{note}`\n"
-    await message.reply(msg)
