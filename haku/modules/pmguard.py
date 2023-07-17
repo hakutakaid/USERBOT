@@ -46,7 +46,7 @@ async def pmguard(client, message):
 
 
 
-@Client.on_message(filters.command("setblockmsg", cmd) & filters.me)
+@Client.on_message(filters.command("setpms", cmd) & filters.me)
 async def setpmmsg(client, message):
     arg = get_arg(message)
     if not arg:

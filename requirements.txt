@@ -9,3 +9,4 @@ telegraph
 aiohttp
 youtube-search-python
 yt-dlp
+wget

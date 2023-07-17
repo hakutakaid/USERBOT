@@ -5,18 +5,18 @@
 """
 
 from haku.database import cli
+from pyrogram import Client
 import asyncio
 
 collection = cli["Haku"]["pmpermit"]
 
+user_id = client.me.id
+
 PMPERMIT_MESSAGE = (
-    "**ᴡᴀʀɴɪɴɢ!⚠️ ᴘʟᴢ ʀᴇᴀᴅ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴄᴀʀᴇꜰᴜʟʟʏ..\n\n**"
-    "**ɪ'ᴍ χнαχυ ᴜꜱᴇʀʙᴏᴛ ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ ᴍʏ ᴍᴀꜱᴛᴇʀ ꜰʀᴏᴍ ꜱᴘᴀᴍᴍᴇʀꜱ.**"
-    "**ɪꜰ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀ ꜱᴘᴀᴍᴍᴇʀ ᴛʜᴇɴ ᴘʟᴢ ᴡᴀɪᴛ!.\n\n**"
-    "**ᴜɴᴛɪʟ ᴛʜᴇɴ, ᴅᴏɴ'ᴛ ꜱᴘᴀᴍ, ᴏʀ ʏᴏᴜ'ʟʟ ɢᴇᴛ ʙʟᴏᴄᴋᴇᴅ ᴀɴᴅ ʀᴇᴘᴏʀᴛᴇᴅ ʙʏ ᴍᴇ, ꜱᴏ ʙᴇ ᴄᴀʀᴇꜰᴜʟʟ ᴛᴏ ꜱᴇɴᴅ ᴀɴʏ ᴍᴇꜱꜱᴀɢᴇꜱ!**"
+    "``ᴘᴇʀɪɴɢᴀᴛᴀɴ !!! ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ \n\nsᴇʙᴇʟᴜᴍ ᴅɪ ᴀᴄᴄ sᴀᴍᴀ [ᴛᴜᴀɴ](tg://user?id={user_id}) sᴀʏᴀ\nᴀᴛᴀᴜ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴅɪ ʙʟᴏᴄᴋ!!\n``"
 )
 
-BLOCKED = "**Sorry !  I will block you, for spamming messages to me**"
+BLOCKED = "``ᴍᴀᴀғ ᴀɴᴅᴀ sᴀʏᴀ ʙʟᴏᴄᴋɪʀ !\n ᴋᴀʀᴇɴᴀ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ !``"
 
 LIMIT = 5
 
