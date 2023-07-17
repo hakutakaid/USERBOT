@@ -1,0 +1,49 @@
+import os
+
+from pyrogram import *
+from pyrogram import filters
+from pyrogram.types import *
+from config import CMD as cmd
+@Client.on_message(filters.command(["curi"], cmd) & filters.me)
+async def pencuri(client, message):
+    dia = message.reply_to_message
+    user_id = client.me.id
+    me = client.me.id
+    if not dia:
+        await client.send_message(me, "`Mohon balas ke media.`")
+    anjing = dia.caption or None
+    mmk = await message.edit("`Processing...`")
+    await mmk.delete()
+    if dia.text:
+        await dia.copy(me)
+        await message.delete()
+    if dia.photo:
+        anu = await client.download_media(dia)
+        await client.send_photo(me, anu, anjing)
+        await message.delete()
+        os.remove(anu)
+    if dia.video:
+        anu = await client.download_media(dia)
+        await client.send_video(me, anu, anjing)
+        await message.delete()
+        os.remove(anu)
+    if dia.audio:
+        anu = await client.download_media(dia)
+        await client.send_audio(me, anu, anjing)
+        await message.delete()
+        os.remove(anu)
+    if dia.voice:
+        anu = await client.download_media(dia)
+        await client.send_voice(me, anu, anjing)
+        await message.delete()
+        os.remove(anu)
+    if dia.document:
+        anu = await client.download_media(dia)
+        await client.send_document(me, anu, anjing)
+        await message.delete()
+        os.remove(anu)
+    try:
+        await client.send_message(me, "**Pap timernya tuh.**")
+    except Exception as e:
+        print(e)
+

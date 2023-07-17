@@ -1,0 +1,5 @@
+git+https://github.com/hakutaka1234/pyrogram
+tgcrypto
+asyncio
+gpytranslate
+requests
