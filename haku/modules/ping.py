@@ -1,3 +1,10 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
+"""
+
 from pyrogram import Client, filters
 from datetime import datetime
 from haku.code.nganu import CREATOR

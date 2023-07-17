@@ -1,6 +1,6 @@
 """
 My Telegeram : https://t.me/Hakutaka_id
-My Github : 
+My Github : @Hakutaka1234
 """
 
 from pyrogram import Client, filters

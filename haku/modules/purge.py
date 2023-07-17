@@ -1,3 +1,9 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
+"""
 import asyncio
 
 from pyrogram import filters

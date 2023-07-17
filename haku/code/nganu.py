@@ -1,7 +1,8 @@
 """
-ɪɴɪ ᴀᴅᴀʟᴀʜ ᴋᴏᴅᴇ ʙᴜᴀᴛᴀɴ @Hakutaka_id
-ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴛᴇʟᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ sᴀʏᴀ
-
+My Telegeram : https://t.me/Hakutaka_id
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
 """
 
 BL_GCAST = [
@@ -9,6 +10,7 @@ BL_GCAST = [
     -1001891980171,
     -1001812143750,
     -1001982790377,
+    -1001944702855,
 ]
 
 CREATOR = [

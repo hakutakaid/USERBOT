@@ -1,6 +1,8 @@
 """
 My Telegeram : https://t.me/Hakutaka_id
-My Github : 
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
 """
 
 import asyncio

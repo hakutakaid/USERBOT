@@ -6,3 +6,5 @@ requests
 httpx[http2]
 telegraph
 aiohttp
+youtube-search-python
+yt-dlp

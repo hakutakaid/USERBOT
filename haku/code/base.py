@@ -1,7 +1,8 @@
 """
-ɪɴɪ ᴀᴅᴀʟᴀʜ ᴋᴏᴅᴇ ʙᴜᴀᴛᴀɴ @Hakutaka_id
-ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ᴛᴇʟᴀʜ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ʙᴏᴛ sᴀʏᴀ
-
+My Telegeram : https://t.me/Hakutaka_id
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
 """
 
 import time

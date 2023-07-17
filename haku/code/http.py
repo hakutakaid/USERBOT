@@ -1,3 +1,9 @@
+"""
+My Telegeram : https://t.me/Hakutaka_id
+My Github : @Hakutaka1234
+Thanks To
+@Kenapanan
+"""
 from asyncio import gather
 from pyrogram import Client
 from aiohttp import ClientSession
