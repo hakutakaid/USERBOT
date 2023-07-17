@@ -15,7 +15,7 @@ from pyrogram.types import *
 from youtubesearchpython import SearchVideos
 from yt_dlp import YoutubeDL
 from haku.code.base import *
-
+from config import CMD as cmd
 
 def run_sync(func, *args, **kwargs):
     return get_event_loop().run_in_executor(None, partial(func, *args, **kwargs))
