@@ -33,3 +33,24 @@ async def panggil_notes(client, message):
     msg_o = await client.get_messages(client.me.id, _note)
     await msg_o.copy(message.chat.id, reply_to_message_id=message.id)
 
+@Client.on_message(filters.me & filters.command("rm", "."))
+async def remove_notes(client, message):
+    name = get_arg(message)
+    user_id = message.from_user.id
+    deleted = await delete_note(user_id, name)
+    if deleted:
+        await message.reply("**Berhasil Menghapus Catatan:** `{}`".format(name))
+    else:
+        await message.reply("**Tidak dapat menemukan catatan:** `{}`".format(name))
+
+
+@Client.on_message(filters.me & filters.command("notes", "."))
+async def get_notes(client, message):
+    user_id = message.from_user.id
+    _notes = await get_note_names(user_id)
+    if not _notes:
+        return await message.reply("**Tidak ada catatan.**")
+    msg = f"**➣ Daftar catatan**\n\n"
+    for note in _notes:
+        msg += f"**•** `{note}`\n"
+    await message.reply(msg)
