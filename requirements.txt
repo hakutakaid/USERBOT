@@ -3,3 +3,6 @@ tgcrypto
 asyncio
 gpytranslate
 requests
+httpx[http2]
+telegraph
+aiohttp
