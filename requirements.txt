@@ -1,4 +1,5 @@
-git+https://github.com/hakutaka1234/pyrogram
+git+https://github.com/hakutakaid/motor
+git+https://github.com/hakutakaid/pyrogram
 tgcrypto
 asyncio
 gpytranslate
