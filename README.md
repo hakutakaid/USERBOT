@@ -1,7 +1,4 @@
-## Simple Userbot Bot Based On Pyrogram
+# Bot Sederhana Bisa Di Jalankan Lewat Termux
 
-## © Credits 
-- [RIZKY](https://github.com/naya1503) for MODULES
-- [Dan](https://github.com/delivrance) for [Pyrogram](https://github.com/pyrogram/pyrogram)
-- [ZAID](https://github.com/ITZ-ZAID) fro MODULES
-## And Thanks To All 
+- Ngambil String Di Sini Aja Aman ID 5 & ID 6
+- [STRINGBOT](https://t.me/stringgenerateantideakbot)
