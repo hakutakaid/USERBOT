@@ -10,7 +10,7 @@ idna==3.4
 mutagen==1.46.0
 pyaes==1.6.1
 pycryptodomex==3.18.0
-git+https://github.com/hakutakaid/pyrogram
+Pyrogram @ git+https://github.com/hakutakaid/pyrogram@4843a4839ebb5407743d9d9ecf6f5d02f558d9b7
 PySocks==1.7.1
 python-dotenv==1.0.0
 requests==2.31.0
