@@ -10,7 +10,8 @@ async def main():
         ex = await cli.get_me()
         LOGGER("✓").info(f"🏠 Bot Berjalan Di {ex.first_name} | {ex.id} ")
         ids.append(ex.id)
-        await cli.send_message("me", f"`🇮🇩 PyroBot Telah Di Aktifkan` ...\n\n**🎴 Pyrogram Version** : `{vp}`\n\n**🏠 Created By :** {ex.mention}")
+        photo_path = "https://telegra.ph//file/8be98f0e8799357968423.jpg"
+        await cli.send_photo("me", photo=photo_path, caption=f"`🇮🇩 PyroBot Telah Di Aktifkan` ...\n\n**🎴 Pyrogram Version** : `{vp}`\n\n**🏠 Created By :** {ex.mention}")
     try:
         await cli.join_chat("asukamuyaas")
     except BaseException as e:
